@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/strict-lib",
+  "sourceRoot": "libs/strict-lib/src",
+  "prefix": "test-workspace-v13",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/strict-lib"],
+      "options": {
+        "jestConfig": "libs/strict-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/strict-lib/src/**/*.ts",
+          "libs/strict-lib/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
