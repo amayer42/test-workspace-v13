@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@test-workspace-v13/strict-buildable-lib": [
+        "libs/strict-buildable-lib/src/index.ts"
+      ],
       "@test-workspace-v13/strict-lib": ["libs/strict-lib/src/index.ts"]
     }
   },

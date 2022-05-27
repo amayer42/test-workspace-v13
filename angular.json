@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "strict-buildable-lib": "libs/strict-buildable-lib",
     "strict-lib": "libs/strict-lib",
     "strict-lib-e2e": "apps/strict-lib-e2e",
     "test-app": "apps/test-app-1",

@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/strict-buildable-lib",
+  "sourceRoot": "libs/strict-buildable-lib/src",
+  "prefix": "test-workspace-v13",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/strict-buildable-lib"],
+      "options": {
+        "project": "libs/strict-buildable-lib/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/strict-buildable-lib/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/strict-buildable-lib/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/strict-buildable-lib"],
+      "options": {
+        "jestConfig": "libs/strict-buildable-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/strict-buildable-lib/src/**/*.ts",
+          "libs/strict-buildable-lib/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
